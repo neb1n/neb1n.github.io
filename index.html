@@ -1,10 +1,151 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hi Ryan</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <p>RYAN I SEE YOU</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- External stylesheet link -->
+    <style>
+        /* Basic inline styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project-card {
+            background-color: #eee;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #008CBA;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nebin Babu</h1>
+    <p>Computer Science Student</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Nebin, a passionate computer science student studying computer science, physics and mathematics. I enjoy creating small python solutions right now and I'm trying to make larger projects.</p>
+    <p>You can check out my work below!</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="path/to/project-image1.jpg" alt="Project 1">
+            <h3>Tkinter Testing</h3>
+            <p>At the start of my academic year I started using tkinter to become proficient in of it.</p>
+            <a href="https://github.com/neb1n/Tkinter-Testing" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="path/to/project-image2.jpg" alt="Project 2">
+            <h3>NEA - Non-Examined Assessement</h3>
+            <p>The work that I'm doing for my NEA.</p>
+            <a href="https://github.com/neb1n/Building-NEA" target="_blank">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me via email or social media:</p>
+    <ul class="contact-info">
+        <li><a href="mailto:nebinbabu12@gmail.com">Email me</a></li>
+        <li><a href="https://www.linkedin.com/in/nebin-babu-417a03353?" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/neb1n" target="_blank">GitHub</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>Cogito Ergo Sum.</p>
+</footer>
+
+</body>
 </html>
