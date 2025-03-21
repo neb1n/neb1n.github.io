@@ -7,7 +7,6 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css"> <!-- External stylesheet link -->
     <style>
-        /*Don't ask what this does and I won't answer, win win*/
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
@@ -27,18 +26,18 @@
           background-position: center;
           height: 400px;
           color: white; 
-          text-align: center; /* this does something for the mobile viewers*/
+          text-align: center;
         }
         
         @media (max-width: 768px) {
           header {
-            height: 250px; /*something or the other for tablets*/
+            height: 250px;
           }
         }
         
         @media (max-width: 480px) {
           header {
-            height: 150px; /* same thing for mobile */
+            height: 150px;
           }
         }
 
@@ -73,19 +72,18 @@
             color: #555;
         }
 
-        /* projects thingy */
         .projects {
             display: flex;
-            flex-wrap: wrap;  /* chat-gpt told me this was the way */
+            flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px;  /* cards have some gaps between them */
         }
 
         .project-card {
             background-color: #ecf0f1;
             padding: 20px;
             border-radius: 8px;
-            width: 48%;  /* two projects in a row */
+            flex: 1 1 calc(50% - 20px);
+            max-width: 48%;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,38 +94,11 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            font-size: 1.6rem;
-            color: #2c3e50;
-            margin: 10px 0;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            color: #7f8c8d;
-        }
-
-        .project-card a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .project-card a:hover {
-            background-color: #2980b9;
+        @media (max-width: 768px) {
+            .project-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
         }
 
         footer {
@@ -139,67 +110,6 @@
             bottom: 0;
             width: 100%;
         }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        /* contacts section */
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .contact-info li {
-            width: 200px; /* width of the cards */
-        }
-
-        .contact-info .social-card {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-info .social-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-info .social-card h3 {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        .contact-info .social-card a {
-            font-size: 1.1rem;
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info .social-card a:hover {
-            color: #2980b9;
-        }
-
-        @media (max-width: 768px) {
-            .project-card {
-                width: 100%;  /* cards are stacked on top of eachother if it's on a smaller screen */
-            }
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -209,23 +119,17 @@
     <p>Computer Science Student</p>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Nebin, a passionate computer science student studying computer science, physics, and mathematics. I enjoy creating small Python solutions and am currently working towards building larger projects.</p>
-    <p>Feel free to explore my work below!</p>
-</section>
-
 <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
         <div class="project-card">
             <h3>Tkinter Testing</h3>
-            <p>At the start of my academic year, I began exploring Tkinter to build GUI applications and become proficient with it.</p>
+            <p>Exploring Tkinter to build GUI applications.</p>
             <a href="https://github.com/neb1n/Tkinter-Testing" target="_blank">View Project</a>
         </div>
         <div class="project-card">
             <h3>NEA - Non-Examined Assessment</h3>
-            <p>This project involves the work I’m doing for my Non-Examined Assessment (NEA) in my coursework.</p>
+            <p>My project for the NEA coursework.</p>
             <a href="https://github.com/neb1n/Building-NEA" target="_blank">View Project</a>
         </div>
     </div>
