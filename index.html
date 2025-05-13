@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .intro {
+      background: linear-gradient(120deg, #1e1e2f, #252537);
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .intro span {
+      color: #67e8f9;
+    }
+
+    .projects {
+      background: #1f1f2f;
+    }
+
+    .project-card {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      width: 100%;
+      max-width: 600px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .project-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-card a {
+      color: #67e8f9;
+      text-decoration: none;
+    }
+
+    .socials {
+      background: #0e0e1e;
+    }
+
+    .socials .links a {
+      display: inline-block;
+      margin: 1rem;
+      font-size: 1.2rem;
+      color: #67e8f9;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .socials .links a:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <section class="intro">
@@ -33,10 +116,24 @@
     <div class="links">
       <a href="https://github.com/yourusername" target="_blank">GitHub</a>
       <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      <a href="mailto:your@email.com">Email</a>
+      <a href="mailto:youremail@example.com">Email</a>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
