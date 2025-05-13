@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nebin's Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body, html {
       margin: 0;
@@ -112,6 +113,12 @@
       background: #0e0e1e;
     }
 
+    .socials .links a i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+    }
+
     .socials .links a {
       display: inline-block;
       margin: 1rem;
@@ -162,11 +169,18 @@
   <section class="socials">
     <h2>Connect with Me</h2>
     <div class="links">
-      <a href="https://github.com/neb1n" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/nebin-babu-417a03353" target="_blank">LinkedIn</a>
-      <a href="mailto:nebinbabu12@gmail.com">Email</a>
+      <a href="https://github.com/neb1n" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com/in/nebin-babu-417a03353" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="mailto:nebinbabu12@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
     </div>
   </section>
+
 
   <script>
     const cards = document.querySelectorAll('.project-card');
